@@ -1,6 +1,6 @@
 package ru.skypro;
 
-public class Car extends transportVehicle {
+public class Car extends TransportVehicle {
 
     public Car(String modelName, int wheelsCount) {
         super(modelName, wheelsCount);

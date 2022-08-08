@@ -1,6 +1,7 @@
 package ru.skypro;
 
-public class ServiceStation {
+public class ServiceStation implements ServiceStationInterface {
+    @Override
     public void check(Car car) {
         if (car != null) {
             System.out.println("Обслуживаем " + car.getModelName());
@@ -10,7 +11,7 @@ public class ServiceStation {
             car.checkEngine();
         }
     }
-
+    @Override
     public void check(Bicycle bicycle) {
         if (bicycle != null) {
             System.out.println("Обслуживаем " + bicycle.getModelName());
@@ -20,6 +21,7 @@ public class ServiceStation {
         }
     }
 
+    @Override
     public void check(Truck truck) {
         if (truck != null) {
             System.out.println("Обслуживаем " + truck.getModelName());

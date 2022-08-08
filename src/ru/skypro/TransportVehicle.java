@@ -1,10 +1,10 @@
 package ru.skypro;
 
-public class transportVehicle {
+public class TransportVehicle {
     private String modelName;
     private int wheelsCount;
 
-    public transportVehicle(String modelName, int wheelsCount) {
+    public TransportVehicle(String modelName, int wheelsCount) {
         this.modelName = modelName;
         this.wheelsCount = wheelsCount;
     }
