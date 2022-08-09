@@ -7,15 +7,15 @@ public class Truck extends TransportVehicle {
     }
 
     public void updateTyre() {
-        System.out.println("Меняем покрышку");
+        System.out.println("Меняем покрышку грузовика " + this.getModelName());
     }
 
     public void checkEngine() {
-        System.out.println("Проверяем двигатель");
+        System.out.println("Проверяем двигатель " + this.getModelName());
     }
 
     public void checkTrailer() {
-        System.out.println("Проверяем прицеп");
+        System.out.println("Проверяем прицеп " + this.getModelName());
     }
 
 
@@ -23,5 +23,15 @@ public class Truck extends TransportVehicle {
     public String toString() {
         return "Truck " + getModelName() +
                 ", количество колес = " + getWheelsCount();
+    }
+
+    @Override
+    public void check() {
+        checkEngine();
+        checkTrailer();
+        for (int i = 0; i < this.getWheelsCount(); i++) {
+            updateTyre();
+        }
+        System.out.println();
     }
 }

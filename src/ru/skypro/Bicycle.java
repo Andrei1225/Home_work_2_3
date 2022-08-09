@@ -7,7 +7,7 @@ public class Bicycle extends TransportVehicle {
     }
 
     public void updateTyre() {
-        System.out.println("Меняем покрышку");
+        System.out.println("Меняем покрышку велосипеда " + this.getModelName());
     }
 
 
@@ -15,5 +15,13 @@ public class Bicycle extends TransportVehicle {
     public String toString() {
         return "Bicycle " + getModelName() +
                 ", количество колес = " + getWheelsCount();
+    }
+
+    @Override
+    public void check() {
+        for (int i = 0; i < this.getWheelsCount(); i++) {
+            updateTyre();
+        }
+        System.out.println();
     }
 }
